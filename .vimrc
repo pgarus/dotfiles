@@ -1,18 +1,10 @@
 " based on https://github.com/tpope/tpope/blob/master/.vimrc
 
 scriptencoding utf-8
-runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 if has('vim_starting')
-  if v:lang =~? "pl"
-    let s:pl_shortcuts = 1
-  endif
-  if has("win32") || has("win64")
-    set runtimepath=$HOME\vimfiles,$VIMRUNTIME,$HOME\vimfiles\after
-    set viewdir=$HOME\.vim-view
-  elseif has("unix")
-    set viewdir=~/.vim-view
-  endif
+  set runtimepath=~/dotfiles/.vim,$VIMRUNTIME,~/dotfiles/.vim/after
+  runtime bundle/vim-pathogen/autoload/pathogen.vim
   silent! execute pathogen#infect()
 endif
 
@@ -66,11 +58,9 @@ set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%03.3b]\ [hex=\%02.2B]\ [pos=
 set timeoutlen=1200
 set ttimeout
 set ttimeoutlen=50
+set viewdir=~/.vim-view
 if v:version >= 700
-  set viminfo=!,'20,<50,s10,h
-  if has("win32") || has("win64")
-    set viminfo+=n$HOME\\.viminfo
-  endif
+  set viminfo=!,'20,<50,s10,h,n~/.viminfo
 endif
 set virtualedit=block
 set wildmenu
@@ -215,7 +205,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
 
   augroup RCVisual
     autocmd GUIEnter * call s:initialize_font()
-    if exists("s:pl_shortcuts")
+    if v:lang =~? "pl"
       autocmd GUIEnter * simalt ~s
     else
       autocmd GUIEnter * simalt ~x
