@@ -54,7 +54,7 @@ set sidescroll=1
 set sidescrolloff=5
 set smartcase
 set smarttab
-set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%03.3b]\ [hex=\%02.2B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
+set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
 set timeoutlen=1200
 set ttimeout
 set ttimeoutlen=50
