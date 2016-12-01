@@ -4,7 +4,7 @@ Colors are configured for terminal with (lightly modified) solarized-light color
 
 ### Changes to solarized-light
 
-Original: https://github.com/altercation/ethanschoonover.com/tree/master/projects/solarized
+Original: https://github.com/altercation/solarized
 
 My changes:
 - base0 changed from #839496 to #75878a
