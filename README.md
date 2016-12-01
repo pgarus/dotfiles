@@ -2,7 +2,7 @@
 
 Colors are configured for terminal with (lightly modified) solarized-light color scheme.
 
-#### Changes to solarized-light
+### Changes to solarized-light
 
 Original: https://github.com/altercation/ethanschoonover.com/tree/master/projects/solarized
 
