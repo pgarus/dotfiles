@@ -84,6 +84,7 @@ if v:version >= 700
   let g:surround_indent = 1
   let g:sql_type_default = "plsql"
   let g:solarized_diffmode = "high"
+  let g:solarized_visibility = "low"
 endif
 
 nnoremap Y y$
