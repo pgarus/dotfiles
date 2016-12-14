@@ -35,7 +35,12 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<
+if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
+  let &listchars = "tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
+  let &fillchars = "vert:\u25d8,fold:\u00b7"
+else
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<
+endif
 if exists('+macmeta')
   set macmeta
 endif
@@ -84,7 +89,7 @@ if v:version >= 700
   let g:surround_indent = 1
   let g:sql_type_default = "plsql"
   let g:solarized_diffmode = "high"
-  let g:solarized_visibility = "low"
+  let g:solarized_visibility = "medium"
 endif
 
 nnoremap Y y$
