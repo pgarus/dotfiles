@@ -19,6 +19,7 @@ endif
 set cmdheight=1
 setglobal commentstring=#\ %s
 set complete-=i
+set cursorline
 set display=lastline
 set encoding=utf-8
 set fileformats=unix,dos
@@ -35,6 +36,7 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
+
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
   let &listchars = "tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
   let &fillchars = "vert:\u25d8,fold:\u00b7"
@@ -64,6 +66,7 @@ set timeoutlen=1200
 set ttimeout
 set ttimeoutlen=50
 set viewdir=~/.vim-view
+set viewoptions-=options
 if v:version >= 700
   set viminfo=!,'20,<50,s10,h,n~/.viminfo
 endif
