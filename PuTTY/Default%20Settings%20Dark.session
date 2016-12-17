@@ -183,7 +183,7 @@ NoPTY\0\
 LocalUserName\\
 UserNameFromEnvironment\0\
 UserName\\
-Environment\\
+Environment\TERM_COLORSCHEME=dark\
 ProxyTelnetCommand\connect%20%25host%20%25port%5Cn\
 ProxyPassword\\
 ProxyUsername\\
