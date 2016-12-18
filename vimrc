@@ -209,7 +209,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
   set list
   set guioptions=a
 
-  set background=dark
+  if has("gui_running") | set background=light | else | set background=dark | endif
   silent! colorscheme solarized
 
   augroup RCVisual
