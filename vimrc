@@ -208,7 +208,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
   set list
   set guioptions=a
 
-  set background=light
+  if $TERM_COLORSCHEME == "dark" | set background=dark | else | set background=light | endif
   silent! colorscheme solarized
 
   augroup RCVisual
