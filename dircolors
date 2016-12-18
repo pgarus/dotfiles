@@ -44,6 +44,7 @@ TERM screen.linux
 TERM st
 TERM st-256color
 TERM terminator
+TERM tmux-256color
 TERM vt100
 TERM xterm
 TERM xterm-16color
@@ -70,7 +71,7 @@ MULTIHARDLINK 00 # regular file with more than one link
 
 DIR 34 # directory
 
-EXEC 31 # file with execute permission
+EXEC 32 # file with execute permission
 
 LINK 33 # symbolic link. (If you set this to 'target' instead of a numerical value, the color is as for the file pointed to.)
 ORPHAN 97;41 # symlink to nonexistent file, or non-stat'able file
