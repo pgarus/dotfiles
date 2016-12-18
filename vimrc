@@ -93,6 +93,7 @@ if v:version >= 700
   let g:sql_type_default = "plsql"
   let g:solarized_diffmode = "high"
   let g:solarized_visibility = "low"
+  let g:solarized_termcolors_blacks_reversed = 1
 endif
 
 nnoremap Y y$
