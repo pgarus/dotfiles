@@ -3,7 +3,7 @@
 scriptencoding utf-8
 
 if has('vim_starting')
-  set runtimepath=~/dotfiles/vim,$VIMRUNTIME,~/dotfiles/vim/after
+  set runtimepath^=~/dotfiles/vim runtimepath+=~/dotfiles/vim/after
   runtime bundle/vim-pathogen/autoload/pathogen.vim
   silent! execute pathogen#infect()
 endif
