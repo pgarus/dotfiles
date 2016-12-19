@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-sneak"]
 	path = vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak.git
+[submodule "vim/bundle/vim-move"]
+	path = vim/bundle/vim-move
+	url = https://github.com/matze/vim-move.git

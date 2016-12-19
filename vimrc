@@ -98,6 +98,7 @@ if v:version >= 700
   let g:sneak#use_ic_scs = 1
   hi link SneakPluginTarget StatusLine
   hi link SneakPluginScope CursorColumn
+  let g:move_key_modifier = 'C'
 endif
 
 nnoremap Y y$
