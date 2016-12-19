@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vim-move"]
 	path = vim/bundle/vim-move
 	url = https://github.com/matze/vim-move.git
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
