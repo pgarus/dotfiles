@@ -36,7 +36,6 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
-
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
   let &listchars = "tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
   let &fillchars = "vert:\u25d8,fold:\u00b7"
@@ -76,6 +75,7 @@ set wildmode=longest:full,full
 set wildignore+=tags,.*.un~,*.pyc
 set winaltkeys=no
 
+let mapleader = "\<Space>"
 let &winwidth=max([80, &columns/2 - 1])
 
 if v:version >= 700
@@ -109,7 +109,6 @@ inoremap <C-C> <Esc>`^
 
 vnoremap <M-<> <gv
 vnoremap <M->> >gv
-vnoremap <Space> I<Space><Esc>gv
 
 inoremap <C-X>^ <C-R>=substitute(&commentstring,' \=%s\>'," -*- ".&ft." -*- vim:set ft=".&ft." ".(&et?"et":"noet")." sw=".&sw." sts=".&sts.':','')<CR>
 
@@ -122,6 +121,9 @@ inoremap <C-W> <C-G>u<C-W>
 noremap  Q  <Nop>
 inoremap jj <Esc>
 vnoremap v  <Esc>
+
+noremap <Space> <Nop>
+sunmap <Space>
 
 map <Up>        <Nop>
 map <Down>      <Nop>
