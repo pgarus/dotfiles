@@ -1,4 +1,4 @@
 set colored-stats on
-set enable-keypad on
+set enable-keypad off
 set mark-symlinked-directories on
 set print-completions-horizontally on
