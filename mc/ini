@@ -25,7 +25,7 @@ fast_refresh=0
 drop_menus=0
 wrap_mode=1
 old_esc_mode=1
-old_esc_mode_timeout=0
+old_esc_mode_timeout=100000
 cd_symlinks=1
 show_all_if_ambiguous=0
 max_dirt_limit=10
@@ -131,6 +131,35 @@ torben_fj_mode=false
 quick_search_mode=2
 
 simple_swap=false
+
+[terminal:tmux-256color]
+kpplus=\\eOk
+kpminus=\\eOm
+kpslash=\\eOo
+kpasterisk=\\eOj
+f1=\\eOP
+f2=\\eOQ
+f3=\\eOR
+f4=\\eOS
+f5=\\e[15~
+f6=\\e[17~
+f7=\\e[18~
+f8=\\e[19~
+f9=\\e[20~
+f10=\\e[21~
+f11=\\e[23~
+f12=\\e[24~
+backspace=
+end=\\e[4~
+up=\\eOA
+down=\\eOB
+left=\\eOD
+right=\\eOC
+home=\\e[1~
+pgdn=\\e[6~
+pgup=\\e[5~
+insert=\\e[2~
+delete=\\e[3~
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
