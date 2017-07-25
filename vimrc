@@ -164,30 +164,8 @@ if has("autocmd")
 
   augroup FTOptions
     autocmd!
-    autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
-    autocmd Syntax   javascript setlocal isk+=$
-    autocmd FileType xml,xsd,xslt,javascript setlocal ts=2
-    autocmd FileType text,txt,mail setlocal ai com=fb:*,fb:-,n:>
-    autocmd FileType sh,zsh,csh,tcsh inoremap <silent> <buffer> <C-X>! #!/bin/<C-R>=&ft<CR>
     autocmd FileType sh,zsh,csh,tcsh let &l:path = substitute($PATH, ':', ',', 'g')
-    autocmd FileType perl,python,ruby inoremap <silent> <buffer> <C-X>! #!/usr/bin/env<Space><C-R>=&ft<CR>
-    autocmd FileType c,cpp,cs,java,perl,javscript,php,aspperl,tex,css let b:surround_101 = "\r\n}"
-    autocmd FileType apache setlocal commentstring=#\ %s
-    autocmd FileType git,gitcommit setlocal foldmethod=syntax foldlevel=1
-    autocmd FileType gitrebase nnoremap <buffer> S :Cycle<CR>
-    autocmd FileType help setlocal ai fo+=2n
     autocmd FileType help nnoremap <silent><buffer> q :q<CR>
-    autocmd FileType html setlocal iskeyword+=~
-    autocmd FileType lua setlocal includeexpr=substitute(v:fname,'\\.','/','g').'.lua'
-    autocmd FileType ruby setlocal tw=79 comments=:#\  isfname+=:
-    autocmd FileType liquid,markdown,text,txt setlocal tw=78 linebreak nolist
-    autocmd FileType tex setlocal formatoptions+=l
-          \ | let b:surround_{char2nr('x')} = "\\texttt{\r}"
-          \ | let b:surround_{char2nr('l')} = "\\\1identifier\1{\r}"
-          \ | let b:surround_{char2nr('e')} = "\\begin{\1environment\1}\n\r\n\\end{\1\1}"
-          \ | let b:surround_{char2nr('v')} = "\\verb|\r|"
-          \ | let b:surround_{char2nr('V')} = "\\begin{verbatim}\n\r\n\\end{verbatim}"
-    autocmd FileType vim setlocal keywordprg=:help
     autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
     autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
   augroup END
