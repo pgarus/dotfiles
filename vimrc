@@ -30,7 +30,7 @@ if v:version + has("patch541") >= 704
   set formatoptions+=j
 endif
 set history=200
-set hlsearch
+set nohlsearch
 set ignorecase
 set incsearch
 set laststatus=2
@@ -94,10 +94,6 @@ if v:version >= 700
   let g:solarized_diffmode = "high"
   let g:solarized_visibility = "low"
   let g:solarized_termcolors_blacks_reversed = 1
-  let g:sneak#s_next = 1
-  let g:sneak#use_ic_scs = 1
-  hi link Sneak StatusLine
-  hi link SneakScope CursorColumn
   let g:move_key_modifier = 'C'
 endif
 
