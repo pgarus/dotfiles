@@ -8,16 +8,17 @@ if has('vim_starting')
   silent! execute pathogen#infect()
 endif
 
-set nocompatible
 set autoindent
 set autoread
 "set autowrite
 set backspace=2
+set nobackup
 if exists('+breakindent')
   set breakindent showbreak=\ +
 endif
 set cmdheight=1
 setglobal commentstring=#\ %s
+set nocompatible
 set complete-=i
 set cursorline
 set display=lastline
@@ -46,8 +47,6 @@ if exists('+macmeta')
   set macmeta
 endif
 set mouse=
-set nobackup
-"set nowrap
 set nrformats-=octal
 set pastetoggle=<F2>
 set scrolloff=1
@@ -74,6 +73,7 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore+=tags,.*.un~,*.pyc
 set winaltkeys=no
+"set nowrap
 
 let mapleader = "\<Space>"
 let &winwidth=max([80, &columns/2 - 1])
