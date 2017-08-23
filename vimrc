@@ -96,8 +96,8 @@ if v:version >= 700
   let g:solarized_termcolors_blacks_reversed = 1
   let g:sneak#s_next = 1
   let g:sneak#use_ic_scs = 1
-  hi link SneakPluginTarget StatusLine
-  hi link SneakPluginScope CursorColumn
+  hi link Sneak StatusLine
+  hi link SneakScope CursorColumn
   let g:move_key_modifier = 'C'
 endif
 
