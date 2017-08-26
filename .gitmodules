@@ -37,6 +37,3 @@
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = git@github.com:pgarus/vim-colors-solarized.git
-[submodule "vim/bundle/base16-vim"]
-	path = vim/bundle/base16-vim
-	url = git@github.com:pgarus/base16-vim.git
