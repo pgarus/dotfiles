@@ -94,7 +94,6 @@ if v:version >= 700
   let g:solarized_diffmode = "high"
   let g:solarized_visibility = "low"
   let g:solarized_termcolors_blacks_reversed = 1
-  let g:move_key_modifier = 'C'
   let g:hardtime_default_on = 1
 endif
 
