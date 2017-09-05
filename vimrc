@@ -81,8 +81,7 @@ let &winwidth=max([80, &columns/2 - 1])
 if v:version >= 700
   let g:is_bash = 1
   let g:sh_noisk = 1
-  let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh', 'sh']
-  let g:liquid_highlight_types = g:markdown_fenced_languages + ['jinja=liquid', 'html+erb=eruby.html', 'html+jinja=liquid.html']
+  let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh']
   let g:ragtag_global_maps = 1
   let g:surround_{char2nr('-')} = "<% \r %>"
   let g:surround_{char2nr('=')} = "<%= \r %>"
@@ -102,12 +101,9 @@ nnoremap Y y$
 if exists(":nohls")
   nnoremap <silent> <C-L> :nohls<CR><C-L>
 endif
-inoremap <C-C> <Esc>`^
 
 vnoremap <M-<> <gv
 vnoremap <M->> >gv
-
-inoremap <C-X>^ <C-R>=substitute(&commentstring,' \=%s\>'," -*- ".&ft." -*- vim:set ft=".&ft." ".(&et?"et":"noet")." sw=".&sw." sts=".&sts.':','')<CR>
 
 noremap  <S-Insert> <MiddleMouse>
 noremap! <S-Insert> <MiddleMouse>
