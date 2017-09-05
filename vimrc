@@ -16,6 +16,7 @@ set nobackup
 if exists('+breakindent')
   set breakindent showbreak=\ +
 endif
+set clipboard=exclude:.*
 set cmdheight=1
 setglobal commentstring=#\ %s
 set nocompatible
