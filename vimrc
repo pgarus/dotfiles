@@ -39,8 +39,8 @@ set laststatus=2
 set lazyredraw
 set linebreak
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
-  let &listchars = "tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
-  let &fillchars = "vert:\u25d8,fold:\u00b7"
+  let &listchars="tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
+  let &fillchars="vert:\u25d8,fold:\u00b7"
 else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<
 endif
@@ -76,8 +76,12 @@ set wildignore+=tags,.*.un~,*.pyc
 set winaltkeys=no
 "set nowrap
 
-let mapleader = "\<Space>"
-let &winwidth=max([80, &columns/2 - 1])
+let mapleader="\<Space>"
+
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+let g:netrw_dirhistmax=0
 
 if v:version >= 700
   let g:is_bash = 1
@@ -142,6 +146,7 @@ if has("autocmd")
 
   augroup Misc
     autocmd!
+    autocmd VimEnter * let g:netrw_winsize=2800/&columns | let &winwidth=max([80, &columns/2 - 1])
     autocmd SourcePre */macros/less.vim set laststatus=0 cmdheight=1
     autocmd BufNewFile */init.d/* set ft=sh
     autocmd BufWinEnter * silent! loadview
