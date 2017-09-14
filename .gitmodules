@@ -28,9 +28,6 @@
 [submodule "vim/bundle/vim-sexp-mappings-for-regular-people"]
 	path = vim/bundle/vim-sexp-mappings-for-regular-people
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
-[submodule "vim/bundle/vim-hardtime"]
-	path = vim/bundle/vim-hardtime
-	url = https://github.com/takac/vim-hardtime.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = git@github.com:pgarus/vim-colors-solarized.git
