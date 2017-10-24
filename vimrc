@@ -163,7 +163,7 @@ if has("autocmd")
     autocmd!
     autocmd FileType sh,zsh,csh,tcsh let &l:path = substitute($PATH, ':', ',', 'g')
     autocmd FileType help nnoremap <silent><buffer> q :q<CR>
-    autocmd FileType javascript,json set shiftwidth=2
+    autocmd FileType javascript,json set shiftwidth=2 expandtab
     autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
     autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
   augroup END
