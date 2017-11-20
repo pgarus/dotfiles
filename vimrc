@@ -22,6 +22,7 @@ setglobal commentstring=#\ %s
 set nocompatible
 set complete-=i
 set cursorline
+set directory^=~/.vim-swap
 set display=lastline
 set encoding=utf-8
 set fileformats=unix,dos
