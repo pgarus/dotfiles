@@ -64,6 +64,8 @@ set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=
 set timeoutlen=1200
 set ttimeout
 set ttimeoutlen=50
+set undofile
+set undodir=~/.vim-undo
 set viewdir=~/.vim-view
 set viewoptions-=options
 if v:version >= 700
