@@ -36,6 +36,7 @@ set history=200
 set nohlsearch
 set ignorecase
 set incsearch
+set nojoinspaces
 set laststatus=2
 set lazyredraw
 set linebreak
