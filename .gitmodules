@@ -30,7 +30,7 @@
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
-	url = git@github.com:pgarus/vim-colors-solarized.git
+	url = https://github.com/pgarus/vim-colors-solarized
 [submodule "vim/bundle/vim-cheatsheet"]
 	path = vim/bundle/vim-cheatsheet
-	url = git@github.com:pgarus/vim-cheatsheet.git
+	url = https://github.com/pgarus/vim-cheatsheet
