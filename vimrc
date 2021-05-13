@@ -161,6 +161,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.txt,README,INSTALL,NEWS,TODO if &ft == "" | set ft=text | endif
     autocmd BufNewFile,BufRead *.pls,*.plsql,*.sql,*.trg,*.pkb,*.pks,*.fnc set ft=sql
     autocmd BufNewFile,BufRead *.md set ft=markdown
+    autocmd BufNewFile,BufRead Dockerfile.* set ft=dockerfile
   augroup END
 
   augroup FTOptions
