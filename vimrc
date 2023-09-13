@@ -170,6 +170,7 @@ if has("autocmd")
     autocmd FileType help nnoremap <silent><buffer> q :q<CR>
     autocmd FileType javascript,json set shiftwidth=2 softtabstop=2 expandtab
     autocmd FileType sh,zsh,csh,tcsh set shiftwidth=2 softtabstop=2 expandtab
+    autocmd FileType perl set shiftwidth=4 softtabstop=4 expandtab
     autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
     autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
   augroup END
