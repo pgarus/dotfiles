@@ -1,6 +1,6 @@
-" based on https://github.com/tpope/tpope/blob/master/.vimrc
-
 scriptencoding utf-8
+
+let g:polyglot_disabled = ['sensible']
 
 if has('vim_starting')
   set runtimepath^=~/dotfiles/vim runtimepath+=~/dotfiles/vim/after
@@ -9,174 +9,118 @@ if has('vim_starting')
 endif
 
 set autoindent
-set autoread
-"set autowrite
-set backspace=2
-set nobackup
-if exists('+breakindent')
-  set breakindent showbreak=\ +
-endif
-set clipboard=exclude:.*
-set cmdheight=1
-setglobal commentstring=#\ %s
-set nocompatible
-set complete-=i
-set cursorline
-set directory^=~/.vim-swap
-set display=lastline
+set breakindent showbreak=\ +
+set linebreak
+set shiftround
+
 set encoding=utf-8
 set fileformats=unix,dos
-set foldlevel=3
-set foldmethod=syntax
-set foldopen+=jump
-if v:version + has("patch541") >= 704
-  set formatoptions+=j
-endif
-set history=200
-set nohlsearch
 set ignorecase
-set incsearch
 set nojoinspaces
-set laststatus=2
-set lazyredraw
-set linebreak
-if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
-  let &listchars="tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
-  let &fillchars="vert:\u25d8,fold:\u00b7"
-else
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<
-endif
-if exists('+macmeta')
-  set macmeta
-endif
-set mouse=
-set nrformats-=octal
-set pastetoggle=<F2>
-set scrolloff=1
-set sessionoptions-=options
-set shiftround
-set shortmess+=aI
-set showcmd
-set showmatch
-set sidescroll=1
-set sidescrolloff=5
 set smartcase
-set smarttab
-set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
-set timeoutlen=1200
-set ttimeout
-set ttimeoutlen=50
+
+set cursorline
+set guioptions=
+set list
+set shortmess+=aI
+
 set undofile
+set directory=~/.vim-swap
 set undodir=~/.vim-undo
 set viewdir=~/.vim-view
-set viewoptions-=options
-if v:version >= 700
-  set viminfo=!,'20,<50,s10,h,n~/.viminfo
-endif
-set virtualedit=block
-set wildmenu
-set wildmode=longest:full,full
-set wildignore+=tags,.*.un~,*.pyc
-set winaltkeys=no
-"set nowrap
+set viminfo+=n~/.viminfo
 
-let mapleader="\<Space>"
-
-let g:netrw_banner=0
-let g:netrw_liststyle=3
-let g:netrw_browse_split=4
-let g:netrw_dirhistmax=0
-
-if v:version >= 700
-  let g:is_bash = 1
-  let g:sh_noisk = 1
-  let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh']
-  let g:ragtag_global_maps = 1
-  let g:surround_{char2nr('-')} = "<% \r %>"
-  let g:surround_{char2nr('=')} = "<%= \r %>"
-  let g:surround_{char2nr('8')} = "/* \r */"
-  let g:surround_{char2nr('s')} = " \r"
-  let g:surround_{char2nr('^')} = "/^\r$/"
-  let g:surround_indent = 1
-  let g:sql_type_default = "plsql"
-  let g:solarized_diffmode = "high"
-  let g:solarized_visibility = "low"
-  let g:solarized_termcolors_blacks_reversed = 1
+if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
+  let &listchars="tab:\u25ba\u00b7,trail:\u02cd,extends:\u25ba,precedes:\u25c4,nbsp:\u25e6"
+  let &fillchars="vert:\u25d8,fold:\u00b7,eob:~"
 endif
 
-nnoremap Y y$
-if exists(":nohls")
-  nnoremap <silent> <C-L> :nohls<CR><C-L>
-endif
+" set clipboard=exclude:.*
+" setglobal commentstring=#\ %s
+" set virtualedit=block
+" set wildmode=longest:full,full
+" set wildignore+=tags,.*.un~,*.pyc
+" set winaltkeys=no
 
-vnoremap <M-<> <gv
-vnoremap <M->> >gv
+" set foldlevel=3
+" set foldmethod=syntax
+" set foldopen+=jump
 
-noremap  <S-Insert> <MiddleMouse>
-noremap! <S-Insert> <MiddleMouse>
+" set lazyredraw
+" set showmatch
+" set sidescrolloff=5
+" set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
+" set timeoutlen=1200
+" set ttimeoutlen=50
 
-inoremap <C-U> <C-G>u<C-U>
-inoremap <C-W> <C-G>u<C-W>
+" set mouse=
+" set pastetoggle=<F2>
 
-noremap  Q  <Nop>
-inoremap jj <Esc>
-vnoremap v  <Esc>
+" let g:netrw_banner=0
+" let g:netrw_liststyle=3
+" let g:netrw_browse_split=4
+" let g:netrw_dirhistmax=0
 
-noremap <Space> <Nop>
-sunmap <Space>
+" let g:is_bash = 1
+" let g:sh_noisk = 1
+let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh']
+" let g:ragtag_global_maps = 1
+let g:surround_indent = 1
+let g:sql_type_default = "plsql"
+let g:solarized_diffmode = "high"
+let g:solarized_visibility = "low"
+let g:solarized_termcolors_blacks_reversed = 1
 
-map <Up>        <Nop>
-map <Down>      <Nop>
-map <Left>      <Nop>
-map <Right>     <Nop>
-map <Home>      <Nop>
-map <End>       <Nop>
-map <PageUp>    <Nop>
-map <PageDown>  <Nop>
+" noremap  <S-Insert> <MiddleMouse>
+" noremap! <S-Insert> <MiddleMouse>
 
-imap <Up>       <Nop>
-imap <Down>     <Nop>
-imap <Left>     <Nop>
-imap <Right>    <Nop>
-imap <Home>     <Nop>
-imap <End>      <Nop>
-imap <PageUp>   <Nop>
-imap <PageDown> <Nop>
+noremap   Q  <Nop>
+inoremap  jj <Esc>
+vnoremap  v  <Esc>
 
-if has("autocmd")
-  filetype plugin indent on
+noremap   <Space> <Nop>
+sunmap    <Space>
 
-  augroup Misc
-    autocmd!
-    autocmd VimEnter * let g:netrw_winsize=2800/&columns | let &winwidth=max([80, &columns/2 - 1])
-    autocmd SourcePre */macros/less.vim set laststatus=0 cmdheight=1
-    autocmd BufNewFile */init.d/* set ft=sh
-    autocmd BufWinEnter * silent! loadview
-    autocmd BufWinLeave * silent! mkview
-  augroup END
+map   <Up>        <Nop>
+map   <Down>      <Nop>
+map   <Left>      <Nop>
+map   <Right>     <Nop>
+map   <Home>      <Nop>
+map   <End>       <Nop>
+map   <PageUp>    <Nop>
+map   <PageDown>  <Nop>
 
-  augroup FTCheck
-    autocmd!
-    autocmd BufNewFile,BufRead *named.conf* set ft=named
-    autocmd BufNewFile,BufRead *.txt,README,INSTALL,NEWS,TODO if &ft == "" | set ft=text | endif
-    autocmd BufNewFile,BufRead *.pls,*.plsql,*.sql,*.trg,*.pkb,*.pks,*.fnc set ft=sql
-    autocmd BufNewFile,BufRead *.md set ft=markdown
-    autocmd BufNewFile,BufRead Dockerfile.* set ft=dockerfile
-  augroup END
+imap  <Up>        <Nop>
+imap  <Down>      <Nop>
+imap  <Left>      <Nop>
+imap  <Right>     <Nop>
+imap  <Home>      <Nop>
+imap  <End>       <Nop>
+imap  <PageUp>    <Nop>
+imap  <PageDown>  <Nop>
 
-  augroup FTOptions
-    autocmd!
-    autocmd FileType sh,zsh,csh,tcsh let &l:path = substitute($PATH, ':', ',', 'g')
-    autocmd FileType help nnoremap <silent><buffer> q :q<CR>
-    autocmd FileType javascript,json set shiftwidth=2 softtabstop=2 expandtab
-    autocmd FileType sh,zsh,csh,tcsh set shiftwidth=2 softtabstop=2 expandtab
-    autocmd FileType perl set shiftwidth=4 softtabstop=4 expandtab
-    autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
-    autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
-  augroup END
-endif
+augroup AutoView
+  autocmd!
+  autocmd BufWinLeave ?* mkview
+  autocmd BufWinEnter ?* silent loadview
+augroup END
 
-if (&t_Co > 2 || has("gui_running")) && has("syntax")
+augroup FileTypes
+  autocmd!
+  " autocmd BufNewFile,BufRead *.txt,README,INSTALL,NEWS,TODO if &ft == "" | set ft=text | endif
+  " autocmd BufNewFile,BufRead *.pls,*.plsql,*.sql,*.trg,*.pkb,*.pks,*.fnc set ft=sql
+  " autocmd BufNewFile,BufRead *.md set ft=markdown
+  " autocmd BufNewFile,BufRead Dockerfile.* set ft=dockerfile
+
+  " autocmd FileType sh,zsh,csh,tcsh let &l:path = substitute($PATH, ':', ',', 'g')
+  " autocmd FileType javascript,json set shiftwidth=2 softtabstop=2 expandtab
+  " autocmd FileType sh,zsh,csh,tcsh set shiftwidth=2 softtabstop=2 expandtab
+  " autocmd FileType perl set shiftwidth=4 softtabstop=4 expandtab
+  " autocmd FileType * if exists("+omnifunc") && &omnifunc == "" | setlocal omnifunc=syntaxcomplete#Complete | endif
+  " autocmd FileType * if exists("+completefunc") && &completefunc == "" | setlocal completefunc=syntaxcomplete#Complete | endif
+augroup END
+
+if &t_Co > 2 || has("gui_running")
   function! s:initialize_font()
     if exists("&guifont")
       if has("mac")
@@ -191,18 +135,16 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
     endif
   endfunction
 
-  if exists("syntax_on") || exists("syntax_manual")
+  if has("gui_running") || system("uname -a") =~ "microsoft"
+    set background=light
   else
-    syntax on
+    set background=dark
   endif
 
-  set list
-  set guioptions=a
-
-  if has("gui_running") || system("uname -a") =~ "microsoft" | set background=light | else | set background=dark | endif
   silent! colorscheme solarized
 
-  augroup RCVisual
+  augroup Visuals
+    autocmd!
     autocmd GUIEnter * call s:initialize_font()
     if v:lang =~? "pl"
       autocmd GUIEnter * simalt ~s
@@ -236,4 +178,3 @@ if has("diff") && &diff
   endfunction
 endif
 
-runtime! macros/matchit.vim
