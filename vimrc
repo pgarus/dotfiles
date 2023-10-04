@@ -9,7 +9,7 @@ if has('vim_starting')
 endif
 
 set autoindent
-set breakindent showbreak=\ +
+if exists('+breakindent') | set breakindent showbreak=\ + | endif
 set linebreak
 set shiftround
 
