@@ -13,16 +13,21 @@ if exists('+breakindent') | set breakindent showbreak=\ + | endif
 set linebreak
 set shiftround
 
+set cursorline
 set encoding=utf-8
 set fileformats=unix,dos
+set guioptions=A
 set ignorecase
-set nojoinspaces
-set smartcase
-
-set cursorline
-set guioptions=
+set lazyredraw
 set list
+set mouse=
+set nojoinspaces
+set pastetoggle=<F2>
 set shortmess+=aI
+set sidescrolloff=5
+set smartcase
+set statusline=%F%m%r\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=%04l,%04v][%p%%]\ [len=%L]\ %=[%n]
+set virtualedit=block
 
 set undofile
 set directory=~/.vim-swap
@@ -35,69 +40,35 @@ if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
   let &fillchars="vert:\u25d8,fold:\u00b7,eob:~"
 endif
 
-" set clipboard=exclude:.*
-" setglobal commentstring=#\ %s
-" set virtualedit=block
-" set wildmode=longest:full,full
-" set wildignore+=tags,.*.un~,*.pyc
-" set winaltkeys=no
-
-" set foldlevel=3
-" set foldmethod=syntax
-" set foldopen+=jump
-
-" set lazyredraw
-" set showmatch
-" set sidescrolloff=5
-" set statusline=%F%m%r%h%w\ %<[%{&ff}]\ %y\ [ascii=\%05.5b]\ [hex=\%04.4B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
-" set timeoutlen=1200
-" set ttimeoutlen=50
-
-" set mouse=
-" set pastetoggle=<F2>
-
-" let g:netrw_banner=0
-" let g:netrw_liststyle=3
-" let g:netrw_browse_split=4
-" let g:netrw_dirhistmax=0
-
-" let g:is_bash = 1
-" let g:sh_noisk = 1
 let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh']
-" let g:ragtag_global_maps = 1
 let g:surround_indent = 1
 let g:sql_type_default = "plsql"
 let g:solarized_diffmode = "high"
 let g:solarized_visibility = "low"
 let g:solarized_termcolors_blacks_reversed = 1
 
-" noremap  <S-Insert> <MiddleMouse>
-" noremap! <S-Insert> <MiddleMouse>
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+map <Home> <Nop>
+map <End> <Nop>
+map <PageUp> <Nop>
+map <PageDown> <Nop>
+map <Space> <Nop>
+map Q <Nop>
 
-noremap   Q  <Nop>
-inoremap  jj <Esc>
-vnoremap  v  <Esc>
+imap <Up> <Nop>
+imap <Down> <Nop>
+imap <Left> <Nop>
+imap <Right> <Nop>
+imap <Home> <Nop>
+imap <End> <Nop>
+imap <PageUp> <Nop>
+imap <PageDown> <Nop>
 
-noremap   <Space> <Nop>
-sunmap    <Space>
-
-map   <Up>        <Nop>
-map   <Down>      <Nop>
-map   <Left>      <Nop>
-map   <Right>     <Nop>
-map   <Home>      <Nop>
-map   <End>       <Nop>
-map   <PageUp>    <Nop>
-map   <PageDown>  <Nop>
-
-imap  <Up>        <Nop>
-imap  <Down>      <Nop>
-imap  <Left>      <Nop>
-imap  <Right>     <Nop>
-imap  <Home>      <Nop>
-imap  <End>       <Nop>
-imap  <PageUp>    <Nop>
-imap  <PageDown>  <Nop>
+inoremap jj <Esc>
+vnoremap v  <Esc>
 
 augroup AutoView
   autocmd!
