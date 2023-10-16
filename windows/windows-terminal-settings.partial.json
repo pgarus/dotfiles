@@ -1,0 +1,82 @@
+{
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "initialCols": 210,
+    "initialRows": 60,
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "antialiasingMode": "cleartype",
+            "bellStyle": "taskbar",
+            "colorScheme": "Solarized Light",
+            "font": 
+            {
+                "face": "Consolas",
+                "size": 9.0
+            },
+            "padding": "4",
+            "scrollbarState": "visible",
+            "useAtlasEngine": false
+        },
+        "list": 
+        [
+            {
+                "name": "Windows PowerShell",
+                "hidden": false,
+                "startingDirectory": null
+            },
+            {
+                "name": "Command Prompt",
+                "hidden": false,
+                "startingDirectory": null
+            },
+            {
+                "name": "Azure Cloud Shell",
+                "hidden": true,
+                "startingDirectory": null
+            },
+            {
+                "name": "Ubuntu-22.04",
+                "hidden": false,
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": null
+            },
+            {
+                "name": "Git Bash",
+                "hidden": true,
+                "source": "Git"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#FDF6E3",
+            "black": "#073642",
+            "blue": "#268BD2",
+            "brightBlack": "#002B36",
+            "brightBlue": "#75878A",
+            "brightCyan": "#839496",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#586E75",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Light",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#EDE2C4",
+            "white": "#EDE2C4",
+            "yellow": "#B58900"
+        }
+    ],
+    "tabSwitcherMode": "disabled",
+    "trimBlockSelection": true,
+    "useAcrylicInTabRow": false,
+    "windowingBehavior": "useExisting"
+}
