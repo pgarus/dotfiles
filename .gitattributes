@@ -1,1 +1,2 @@
-*	text=auto
+* text=auto
+/windows/PuTTY/*.session text eol=lf
