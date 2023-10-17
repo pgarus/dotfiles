@@ -44,6 +44,7 @@ let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh
 let g:surround_indent = 1
 let g:sql_type_default = "plsql"
 let g:solarized_diffmode = "high"
+let g:solarized_menu = 0
 let g:solarized_visibility = "low"
 let g:solarized_termcolors_blacks_reversed = 1
 
@@ -106,12 +107,13 @@ if &t_Co > 2 || has("gui_running")
     endif
   endfunction
 
-  if has("gui_running") || system("uname -a") =~ "microsoft"
-    set background=light
-  else
-    set background=dark
-  endif
+  " if has("gui_running") || system("uname -a") =~ "microsoft"
+  "   set background=light
+  " else
+  "   set background=dark
+  " endif
 
+  set background=light
   silent! colorscheme solarized
 
   augroup Visuals
