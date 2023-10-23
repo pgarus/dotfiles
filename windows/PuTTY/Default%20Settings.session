@@ -160,7 +160,7 @@ NoRemoteResize\0\
 NoMouseReporting\0\
 NoApplicationCursors\0\
 NoApplicationKeys\0\
-LinuxFunctionKeys\2\
+LinuxFunctionKeys\0\
 RXVTHomeEnd\0\
 BackspaceIsDelete\1\
 PassiveTelnet\0\
