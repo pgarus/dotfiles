@@ -10,6 +10,7 @@
             "antialiasingMode": "cleartype",
             "bellStyle": "taskbar",
             "colorScheme": "Solarized Light",
+            "cursorShape": "vintage",
             "font": 
             {
                 "face": "Consolas",
