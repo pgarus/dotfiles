@@ -1,12 +1,22 @@
-#!/bin/sh
+#!/bin/sh -e
 
-ln -sfrT dircolors ~/.dircolors
-ln -sfrT inputrc ~/.inputrc
-ln -sfrT tmux ~/.tmux
-ln -sfrT vimrc ~/.vimrc
+rm -r ~/.dircolors
+ln -sr dircolors ~/.dircolors
 
-ln -sfrT mc/config ~/.config/mc
-ln -sfrT mc/skins ~/.local/share/mc/skins
+rm -r ~/.inputrc
+ln -sr inputrc ~/.inputrc
+
+rm -r ~/.tmux
+ln -sr tmux ~/.tmux
+
+rm ~/.vimrc
+ln -sr vimrc ~/.vimrc
+
+rm ~/.config/mc
+ln -sr mc/config ~/.config/mc
+
+rm ~/.local/share/mc/skins
+ln -sr mc/skins ~/.local/share/mc/skins
 
 mkdir -p ~/.vim-swap ~/.vim-undo ~/.vim-view
 
