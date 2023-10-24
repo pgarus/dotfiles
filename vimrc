@@ -41,6 +41,7 @@ if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
 endif
 
 let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh']
+let g:netrw_dirhistmax = 0
 let g:surround_indent = 1
 let g:sql_type_default = "plsql"
 let g:solarized_diffmode = "high"
