@@ -1,23 +1,23 @@
 #!/bin/sh -e
 
-rm -r ~/.dircolors
+rm -f ~/.dircolors
 ln -sr dircolors ~/.dircolors
 
-rm -r ~/.inputrc
+rm -f ~/.inputrc
 ln -sr inputrc ~/.inputrc
 
-rm -r ~/.tmux
+rm -f ~/.tmux
 ln -sr tmux ~/.tmux
 
-rm ~/.vimrc
+rm -f ~/.vimrc
 ln -sr vimrc ~/.vimrc
 
-rm ~/.config/mc
+rm -f ~/.config/mc
 ln -sr mc/config ~/.config/mc
 
-rm ~/.local/share/mc/skins
+rm -f ~/.local/share/mc/skins
 ln -sr mc/skins ~/.local/share/mc/skins
 
 mkdir -p ~/.vim-swap ~/.vim-undo ~/.vim-view
 
-touch ~/.hushlogin
+touch -a ~/.hushlogin
