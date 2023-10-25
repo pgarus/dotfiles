@@ -3,6 +3,9 @@
 rm -f ~/.dircolors
 ln -sr dircolors ~/.dircolors
 
+rm -f ~/.gitconfig
+ln -sr gitconfig ~/.gitconfig
+
 rm -f ~/.inputrc
 ln -sr inputrc ~/.inputrc
 

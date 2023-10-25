@@ -1,0 +1,4 @@
+[color "diff"]
+	func = cyan
+	meta = cyan ul
+	whitespace = normal yellow
