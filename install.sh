@@ -1,5 +1,9 @@
 #!/bin/bash
 
+dotfiles_directory=$(dirname "$0")
+
+pushd "$dotfiles_directory" > /dev/null
+
 rm -f ~/.dircolors
 ln -sr dircolors ~/.dircolors
 
@@ -26,3 +30,5 @@ touch -a ~/.hushlogin
 if [[ -z "$(git config --global --get include.path '^~/dotfiles/gitconfig$')" ]]; then
 	git config --global --add include.path '~/dotfiles/gitconfig'
 fi
+
+popd > /dev/null
