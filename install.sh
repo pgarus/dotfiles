@@ -23,6 +23,6 @@ mkdir -p ~/.vim-swap ~/.vim-undo ~/.vim-view
 touch -a ~/.gitconfig
 touch -a ~/.hushlogin
 
-if [[ -z "$(git config --global --get --fixed-value include.path '~/dotfiles/gitconfig')" ]]; then
+if [[ -z "$(git config --global --get include.path '^~/dotfiles/gitconfig$')" ]]; then
 	git config --global --add include.path '~/dotfiles/gitconfig'
 fi
