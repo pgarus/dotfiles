@@ -3,6 +3,7 @@
     "copyOnSelect": true,
     "initialCols": 210,
     "initialRows": 60,
+    "launchMode": "maximized",
     "profiles": 
     {
         "defaults": 
