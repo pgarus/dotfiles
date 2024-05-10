@@ -2,3 +2,6 @@
 	func = cyan
 	meta = cyan ul
 	whitespace = normal yellow
+
+[includeIf "gitdir:/mnt/d/projects/"]
+	path = ~/dotfiles/gitconfig-wsl-repositories
