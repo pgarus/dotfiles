@@ -5,3 +5,8 @@
 
 [includeIf "gitdir:/mnt/d/projects/"]
 	path = ~/dotfiles/gitconfig-wsl-repositories
+
+[includeIf "gitdir/i:d:/projects/"]
+	path = ~/dotfiles/gitconfig-large-repositories
+[includeIf "gitdir:/mnt/d/projects/"]
+	path = ~/dotfiles/gitconfig-large-repositories
