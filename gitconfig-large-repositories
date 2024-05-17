@@ -1,2 +1,4 @@
 [feature]
 	manyFiles = true
+[fetch]
+	writeCommitGraph = true
