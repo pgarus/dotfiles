@@ -3,10 +3,12 @@
 	meta = cyan ul
 	whitespace = normal yellow
 
-[includeIf "gitdir:/mnt/d/projects/"]
+[includeIf "gitdir:/mnt/c/"]
+	path = ~/dotfiles/gitconfig-wsl-repositories
+[includeIf "gitdir:/mnt/d/"]
 	path = ~/dotfiles/gitconfig-wsl-repositories
 
-[includeIf "gitdir/i:d:/projects/"]
+[includeIf "gitdir/i:d:/workspace/projects/"]
 	path = ~/dotfiles/gitconfig-large-repositories
-[includeIf "gitdir:/mnt/d/projects/"]
+[includeIf "gitdir:/mnt/d/workspace/projects/"]
 	path = ~/dotfiles/gitconfig-large-repositories
