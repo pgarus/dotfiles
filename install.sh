@@ -31,4 +31,6 @@ if [[ -z "$(git config --global --get include.path '^~/dotfiles/gitconfig$')" ]]
 	git config --global --add include.path '~/dotfiles/gitconfig'
 fi
 
+grep -qxF 'source ~/dotfiles/fzfrc' ~/.profile || echo 'source ~/dotfiles/fzfrc' >> ~/.profile
+
 popd > /dev/null

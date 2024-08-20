@@ -1,0 +1,15 @@
+export FZF_DEFAULT_OPTS="
+	--layout=reverse-list
+	--height=~40%
+	--scroll-off=3
+	--no-hscroll
+	--info=inline-right
+	--border=double
+	--margin=0,0
+	--pointer='>'
+	--marker='*'
+	--color=fg:-1,bg:-1,hl:green,fg+:-1,bg+:white,gutter:-1,hl+:green,info:yellow,border:bright-cyan,prompt:yellow,pointer:bright-cyan,marker:bright-red,spinner:yellow
+	--bind=tab: --bind=btab: --bind=insert:toggle+down"
+
+[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
+[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
