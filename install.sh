@@ -16,9 +16,11 @@ ln -sr tmux ~/.tmux
 rm -f ~/.vimrc
 ln -sr vimrc ~/.vimrc
 
+mkdir -p ~/.config
 rm -f ~/.config/mc
 ln -sr mc/config ~/.config/mc
 
+mkdir -p ~/.local/share/mc
 rm -f ~/.local/share/mc/skins
 ln -sr mc/skins ~/.local/share/mc/skins
 
