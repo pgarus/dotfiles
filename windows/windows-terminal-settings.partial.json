@@ -17,6 +17,7 @@
                 "face": "Consolas",
                 "size": 9.0
             },
+            "intenseTextStyle": "bold",
             "padding": "4",
             "scrollbarState": "visible",
             "useAtlasEngine": false
